@@ -1,9 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Project Name
- Gallerioni movies
+math magician
 
-> Gallerioni movies is an interactive movie streaming website were movie lovers interact with movies my commenting and liking.
+> "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related quote.
 
 ## Built With
 
@@ -44,13 +44,7 @@ Getting packages and debuging with Webhint
 
 - streaming movies
 
-## Authors
-
-👤 **Ezekiel Utshudi**
-
-- GitHub: [@EzekielUtshudi](https://github.com/EzekielUtshudi)
-- Twitter: [@UtshudiEzekiel](https://twitter.com/UtshudiEzekiel)
-- LinkedIn: [@UtshudiEzekiel](https://www.linkedin.com/in/ezekiel-utshudi-195782162/)
+## Author
 
 👤 **Misheck Livingi**
 
