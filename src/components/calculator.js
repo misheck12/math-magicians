@@ -1,18 +1,41 @@
 import React from 'react';
+import Calculate from '../logic/calculate';
 import Button from './Button';
+import Display from './screen';
 
 class Calculator extends React.PureComponent {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+    this.setState({
+      total: null,
+      next: null,
+      operation: null,
+    });
+  }
+
+  onBtnPressed = (btnName) => {
+    const result = Calculate(this.state, btnName);
+    this.setState(result);
+  };
+
+  render = () => {
+    const { total, next, operation } = this.state;
+    let buffer = `${total}${operation}${next}`.replace(/null/g, '');
+    buffer = buffer.replace(/undefined/g, '');
+    const window = buffer;
+
     return (
       <div className="main">
-        <div className="display">
-          <h1 className="pixel font">0</h1>
-        </div>
-        <Button ctrls={['AC', '+/-', '%', '÷']} last={false} />
-        <Button ctrls={['7', '8', '9', 'X']} last={false} />
-        <Button ctrls={['4', '5', '6', '-']} last={false} />
-        <Button ctrls={['1', '2', '3', '+']} last={false} />
-        <Button ctrls={['0', '.', '=']} last />
+        <Display display={window === '' ? undefined : window} />
+        <Button ctrls={['AC', '+/-', '%', '÷']} setBtn={this.onBtnPressed} last={false} />
+        <Button ctrls={['7', '8', '9', 'x']} setBtn={this.onBtnPressed} last={false} />
+        <Button ctrls={['4', '5', '6', '-']} setBtn={this.onBtnPressed} last={false} />
+        <Button ctrls={['1', '2', '3', '+']} setBtn={this.onBtnPressed} last={false} />
+        <Button ctrls={['0', '.', '=']} setBtn={this.onBtnPressed} last />
       </div>
     );
   }
