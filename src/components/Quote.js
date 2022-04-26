@@ -5,16 +5,20 @@ function Quote() {
   return (
     <figure className="quote">
       <blockquote>
-        Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.
+        Mathematics as an expression of the human mind reflects the active will,
+        the contemplative reason, and the desire for aesthetic perfection.
+        Its basic elements are logic and intuition, analysis and construction,
+        generality and individuality.
       </blockquote>
       <figcaption>
-        &mdash; Jeremy Keith,
+        &mdash; Richard Courant,
         {' '}
-        <cite>Mental models</cite>
+        <cite> German-American mathematician</cite>
         {' '}
 
       </figcaption>
     </figure>
+
   );
 }
 
