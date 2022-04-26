@@ -1,27 +1,130 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #de8621, #4dde21);
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7.3rem, auto) repeat(5, 5rem);
+}
+
+.calculator-grid > .btn-subgrid > button {
+  cursor: pointer;
+  outline: none;
+  font-size: 2rem;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+:is(.orange:hover, .orange:focus) {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+}
+
+:is(.calculator-grid > .btn-subgrid > button:hover, .calculator-grid > .btn-subgrid > button:focus) {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+.orange {
+  background-color: rgb(255 113 0 / 75%) !important;
+}
+
+.span_two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.74);
+  padding: 10px 15px;
+  border: 1px solid white;
+}
+
+.output .operand {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.output .operand p {
+  margin: 0;
+  color: white;
+  font-size: 2.8rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calculator-grid .btn-subgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7.3rem, auto) repeat(5, 6rem);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.navigation h1 {
+  font-size: 2.2rem;
+}
+
+.navigation > ul {
+  display: flex;
+}
+
+.navigation > ul > li {
+  list-style: none;
+  padding: 0 1.5rem;
+  border-left: 1.4px solid black;
+}
+
+.navigation > ul > li:first-child {
+  border: none;
+}
+
+.navigation > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-content {
+  width: 70%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.calculator-page {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10rem;
+}
+
+.quote {
+  width: 60%;
+  margin: 6rem auto;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: 5px 5px 5px black;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 1em;
 }

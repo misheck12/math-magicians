@@ -19,8 +19,6 @@
 
 To get a local copy up and running follow these simple example steps.
 
-- clone our repo(https://github.com/EzekielUtshudi/Javascrip-Capstone-Project)
-
 - Run npm start to run the project
 - Run npm run build if you have changes anything to build the bundle.
 - Then open the dist/index.html file. 
